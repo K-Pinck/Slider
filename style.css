@@ -1,0 +1,218 @@
+.sliderContainer {
+  width: 90%;
+  border: 8px solid #d8d8d8;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+  color: #052b6f;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 5px 2fr;
+  grid-template-columns: 2fr 2fr;
+      -ms-grid-rows: auto 5px auto;
+          grid-template-areas:
+    "head head head head"
+    "left-col right-col right-col right-col";
+  gap: 5px;
+  padding: 1rem 3%;
+}
+
+.slider--header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: head;
+}
+
+.slider--col_left {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: left-col;
+  /* border: 1px solid red; */
+}
+
+.slider--col_right {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-area: right-col;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-top: 2.6%;
+  padding-left: 3%;
+  /* border: 1px solid green; */
+}
+
+.yearHeading {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Bebas Neue", sans-serif;
+	margin-bottom: 2rem;
+}
+
+.txtWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+/* 	flex-direction:column; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.inputWrap {
+  width: 30%;
+  text-align: center;
+	margin-top: -18px;
+}
+
+
+.billInput {
+  width: 40%;
+	font-size: .75rem;
+  border-color: #052b6f;
+  border-radius: 5px;
+}
+
+.stButton {
+  display: inline-block;
+	font-size: .75rem;
+	padding-top: 3.2px;
+  background-color: #052b6f;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.graph {
+  width: 70%;
+  margin-left: 1.5%;
+	margin-top: 5%;
+}
+
+.slider {
+  width: 72%;
+}
+
+.slideLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 72%;
+  margin-right: 3%;
+  margin-left: 1%;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-weight: bold;
+}
+
+.val {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.disclaimerWrap {
+	margin-top: auto;
+}
+
+.disclaimer {
+	font-size:.65rem;
+	line-height:.5;
+	
+}
+
+@media only screen and (max-width: 900px) {
+  .sliderContainer {
+    display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5px 1fr;
+  grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: auto 5px auto 5px auto;
+            grid-template-areas:
+      "head head"
+      "left-col left-col"
+      "right-col right-col";
+    gap: 5px;
+  }
+
+  /* .slider--col_left {
+    border: 1px solid green;
+    
+  } */
+
+  .txtWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .inputWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    width: 70%;
+		margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .txtWrap > p {
+    font-size: 1.7rem;
+		text-align: center;
+  }
+
+  .billInput {
+    width: 75%;
+  }
+
+  .stButton {
+    display: inline-block;
+		padding-bottom: 3.2px;
+/* 		font-size: 1rem; */
+  }
+
+  .graph {
+    margin-left: 10%;
+    width: 79%;
+  }
+
+  .slider {
+    width:80%;
+    margin-left: 10%;
+  }
+  .slideLabel {
+    width:80%;
+    margin-left: 10%;
+  }
+	
+	.disclaimerWrap {
+		margin-top: 1.2rem;
+	}
+	
+	.disclaimer {
+		text-align: center;
+		font-size: .5rem;
+		line-height: 1;
+	}
+}
