@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap"
+        rel="stylesheet">
+    <title>Slider Prototype</title>
+</head>
+
+<body>
+
+    <div class="sliderContainer">
+        <!-- Header for slider widget -->
+        <div class="slider--header">
+            <h1 class="yearHeading">ENERGY SAVINGS CALCULATOR</h1>
+        </div>
+
+        <!-- Left column -->
+        <div class="slider--col_left">
+            <div class="txtWrap">
+                <p>Your Current Average Monthly Bill</p>
+                <div class="inputWrap">
+                    <span class="bill">$ <input type="number" class="billInput"></span>
+                    <button class="stButton">Start</button>
+                </div>
+            </div>
+            <img src="imgs/Slider_graph.png" alt="graph" class="graph">
+            <input type="range" min="0" max="50" value="0" id="year_range-slider" class="slider" step="10"
+                list="year_settings">
+
+
+            <datalist id="year_settings">
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </datalist>
+            <div class="slideLabel">
+                <p>1</p>
+                <p>10</p>
+                <p>20</p>
+                <p>30</p>
+                <p>40</p>
+                <p>50</p>
+            </div>
+
+        </div>
+
+
+        <div class="slider--col_right">
+            <p>Future Monthly Bill:<span class="val"></span></p>
+            <p>Future Monthly Bill at 25% Savings: <span class="savings"></span></p>
+            <p>Total Savings: <span class="yearly"></span></p>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
